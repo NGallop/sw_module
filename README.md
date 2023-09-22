@@ -1,2 +1,3 @@
-# sw_module
-Coding space for Software module bits
+# Coding Space for Software Module
+## DOPS material
+Complete three Python challenges and push them to this repo
