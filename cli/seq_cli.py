@@ -15,7 +15,7 @@ class cli_obj():
         parser = argparse.ArgumentParser(description='')
 
         parser.add_argument(
-            '-i', '--input', required = True, help='Input file'
+            '-i', '--input', help='Input file'
         )
 
         parser.add_argument(
@@ -26,22 +26,15 @@ class cli_obj():
             '-c', '--reverse_complement', action='store_true',
             help='Convert sequence to the reverse complement'
         )
-
-        parser.add_argument(
-            '-md', '--md5sum', action='store_true',
-            help='perform an md5sum check of a file'
-        )
         
         self.args = parser.parse_args(sys_args)
 
     def arg_selection(self):
-        selected = [False, False, False]
+        selected = [False, False]
 
         if (self.args.protein == True):
             selected[0] = True
         if (self.args.reverse_complement == True):
             selected[1] = True
-        if (self.args.md5sum == True):
-            selected[2] = True
 
         return selected

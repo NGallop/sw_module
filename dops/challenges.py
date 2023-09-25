@@ -10,7 +10,7 @@ class sw_challenges():
         self.sequence = incoming_sequence
         self.codon_table = codon_dict
 
-    # 2.2: translate DNA sequence to amino acid sequence
+    # 1: translate DNA sequence to amino acid sequence
     # e.g. aggagtaag > RSK, or AGGAGTAAG > RSK
     def DNA_to_protein(self):
         amino_list = []
@@ -23,7 +23,7 @@ class sw_challenges():
         amino_acid_sequence = "".join(amino_list)
         return amino_acid_sequence
     
-    # 2.3 generate the reverse complement of a sequence
+    # 2: generate the reverse complement of a sequence
     # e.g. aggagtaag > cttactcct
     def reverse_seq(self):
         seq = self.sequence
@@ -41,6 +41,3 @@ class sw_challenges():
                 outbase = base
             seqOut=outbase+seqOut
         return seqOut
-    
-    def md5sum(self):
-        return
